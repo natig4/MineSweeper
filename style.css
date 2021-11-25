@@ -1,0 +1,109 @@
+body {
+    background-color: rgba(122, 122, 113, 0.555);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin: auto;
+}
+
+h1,
+.header-box {
+    color: black;
+    font-family: sans-serif;
+}
+
+table {
+    margin: auto;
+    color: black;
+    background-color: #dcd6bc;
+}
+
+.game-table {
+    border: 5px solid gray;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: black;
+    width: fit-content;
+}
+
+td {
+    padding: 12px;
+    width: 32px;
+    height: 32px;
+    border: 5px solid;
+    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+}
+
+button {
+    background-color: tan;
+    font-size: 24px;
+    color: black;
+    padding: 20px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+    border-width: 5px;
+}
+
+.stopwatch {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 25px;
+    width: 250px;
+    margin: auto;
+}
+
+.occupied {
+    height: 32px;
+    width: 32px;
+    border: 5px solid;
+    background-color: #cecab7;
+    border-color: #9c998d;
+}
+
+.choosen {
+    background-color: #cecab7;
+    border-color: #9c998d;
+}
+
+.lives-box {
+    height: 50px;
+    width: 90px;
+    font-size: 50px;
+    float: left;
+}
+
+.game-button {
+    font-size: 30px;
+    position: inline-block;
+    align-items: center;
+    margin-right: 80px;
+}
+
+.header-box {
+    line-height: 48px;
+    font-size: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+.best-score {
+    font-size: 28px;
+    display: block;
+    width: 400px;
+}
+
+.checked {
+    height: 40px;
+    width: 40px;
+    border: 2px solid;
+    background-color: #cecab7;
+    border-color: #9c998d;
+}
+
+.table-footer {
+    color: white;
+    width: 100%;
+    font-size: 27px;
+    border-top: 5px solid gray;
+}
