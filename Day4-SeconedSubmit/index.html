@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Nati's Boom</title>
+</head>
+
+
+<body onload="init()">
+    <div class="header">
+        <h1>Shula</h1>
+        <div class="header-box">
+
+            <box class="best-score">You are the 1st player to play this Good Luck!</box>
+        </div>
+        <div>
+            <button class="level choosen" data-level="16" onclick="changeLevel(this)">Beginner</button>
+            <button class="level" data-level="64" onclick="changeLevel(this)">Mediocre</button>
+            <button class="level" data-level="144" onclick="changeLevel(this)">Expert</button></span>
+        </div>
+    </div>
+    <div class="stopwatch"> <span id="hour">00</span> :
+        <span id="min">00</span> :
+        <span id="sec">00</span> :
+        <span id="milisec">00</span>
+    </div>
+    <div class="game-table">
+        <div class="table-header">
+            <box class="lives-box"></box>
+            <button class="game-button" onclick="newGame()">😀</button></div>
+        <table>
+            <tbody class="board">
+            </tbody>
+        </table>
+        <div class="table-footer">Possible Mines Left <span></span></div>
+    </div>
+    <script src="util.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
