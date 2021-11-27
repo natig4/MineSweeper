@@ -10,6 +10,7 @@ h1,
 .header-box {
     color: black;
     font-family: 'Roboto Mono', monospace;
+    font-weight: bold
 }
 
 table {
@@ -48,6 +49,7 @@ button {
 
 .stopwatch {
     font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
     font-size: 25px;
     width: 250px;
     margin: auto;
@@ -59,6 +61,7 @@ button {
     border: 5px solid;
     background-color: #cecab7;
     border-color: #9c998d;
+    font-weight: bold
 }
 
 .choosen {
@@ -76,13 +79,6 @@ button {
 .game-button {
     font-size: 30px;
     margin-right: 100px;
-}
-
-.header-box {
-    line-height: 48px;
-    font-size: 50px;
-    text-align: center;
-    display: inline-block;
 }
 
 .best-score {
@@ -103,7 +99,9 @@ button {
     color: black;
     width: 100%;
     font-size: 27px;
+    font-weight: bold;
     border-top: 5px solid gray;
+    background-color: rgb(219, 219, 202);
 }
 
 .modal {
@@ -113,9 +111,12 @@ button {
     float: left;
     padding: 5px;
     border: 10px double white;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
 }
 
 .player-name {
     margin-top: 50px;
     bottom: 0;
+    font-weight: bold
 }
