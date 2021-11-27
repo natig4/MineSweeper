@@ -8,17 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Nati's Boom</title>
 </head>
 
 
 <body onload="init()">
     <div class="header">
-        <h1>Shula</h1>
+        <h1>Shula Ha'Mokshim</h1>
         <div class="header-box">
 
-            <box class="best-score">You are the 1st player to play this Good Luck!</box>
+            <!-- <box class="best-score">You are the 1st player to play this Good Luck!</box> -->
         </div>
         <div>
             <button class="level choosen" data-level="16" onclick="changeLevel(this)">Beginner</button>
@@ -37,12 +37,21 @@
             <button class="game-button" onclick="newGame()">😀</button></div>
         <table>
             <tbody class="board">
+                <div class="modal">
+                    <h3>You are a <span>loser</span>!<br>
+                        <!-- with a time of -->
+                        <score-span>
+                            <score-span>
+                    </h3>
+                    <button onclick="closeModal()">Close</button>
+
+                </div>
             </tbody>
         </table>
         <div class="table-footer">Possible Mines Left <span></span></div>
     </div>
-    <script src="util.js"></script>
-    <script src="main.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
