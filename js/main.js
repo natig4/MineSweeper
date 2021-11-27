@@ -198,6 +198,7 @@ function changeLevel(elBtn) {
         Size: Math.sqrt(gBoardSize),
         MINES: minesAmount()
     }
+    closeModal();
     init();
 }
 
