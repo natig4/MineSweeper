@@ -6,8 +6,6 @@ var gInterval;
 var gScore = -Infinity;
 var gBestScore;
 var gLives;
-var gStartingTime;
-var gFinishingTime;
 var gGame = {};
 var gLevel = {};
 var smiley = '😀';
@@ -50,7 +48,7 @@ function newGame() {
         gPossibleFlags: gLevel.MINES,
         minesLocations: [],
         startTime: 0,
-        gameTime: 0
+        gameTime: []
     };
     gGame = {
         isOn: false,
@@ -87,9 +85,8 @@ function renderCell(elCell, i, j) {
         start();
     }
     if (!gGame.isOn || gBoard[i][j].isMarked || (gBoard[i][j].type === 'mine' && gGame.markedCount + gGame.shownCount === 0)) return;
-    var type = gBoard[i][j].type;
     var strHTML = ''
-    switch (type) {
+    switch (gBoard[i][j].type) {
         case 'mine':
             strHTML = MINE;
             break;
@@ -143,10 +140,6 @@ function markCell(e, elCell, i, j) {
     renderPossibleFlagsAmount();
 }
 
-function renderScore() {
-    gScore = gFinishingTime - gStartingTime;
-}
-
 function gameOver(elCell, i, j) {
     var action = ''
     if (gBoard[i][j].type === 'mine') {
@@ -160,8 +153,7 @@ function gameOver(elCell, i, j) {
         if (gLives === 0) {
             action = 'gameLost'
         }
-    }
-    if (gGame.shownCount === gBoardSize - gLevel.MINES) {
+    } else if (gGame.shownCount === gBoardSize - gLevel.MINES) {
         gGame.isOn = false;
         action = 'won'
     }
@@ -174,12 +166,10 @@ function gameOver(elCell, i, j) {
         case 'gameLost':
             elBtn.innerText = '🤯'
             openMines()
-            gLevel.gameTime = Date.now() - gLevel.startTime;
             openModal(false)
             break;
         case 'won':
             elBtn.innerText = '😎'
-            gLevel.gameTime = Date.now() - gLevel.startTime;
             openModal(true)
             break;
     }

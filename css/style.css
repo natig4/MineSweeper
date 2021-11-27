@@ -75,9 +75,7 @@ button {
 
 .game-button {
     font-size: 30px;
-    position: inline-block;
-    align-items: center;
-    margin-right: 80px;
+    margin-right: 100px;
 }
 
 .header-box {
@@ -115,4 +113,9 @@ button {
     float: left;
     padding: 5px;
     border: 10px double white;
+}
+
+.player-name {
+    margin-top: 50px;
+    bottom: 0;
 }

@@ -35,7 +35,7 @@ function createMat() {
         }
         board.push(row)
     }
-    return board
+    return board;
 }
 
 function buildBoard() {
@@ -177,16 +177,12 @@ function openModal(isVictory) {
     var elModal = document.querySelector('.modal');
     var elSpan = document.querySelector('.modal span')
     var elTimer = document.querySelector('.stopwatch')
-        // var elScore = document.querySelector('score-span')
+    var elScore = document.querySelector('score-span')
     elTimer.style.display = 'none';
     elSpan.innerText = (isVictory) ? ' Winner' : ' Loser';
     elModal.style.display = 'block';
-    // var text = elTimer.innerText;
-
-    // console.log(text.charAt(2))
-    // for (var i = 0; i < text.length; i + 2)
-    //     if (text.charAt(1) === 0 && text.charAt(2) === 0) console.log('0')
-    // elScore.innerText = elTimer.innerText;
+    var text = gTimeOut.hourOut + ':' + gTimeOut.minOut + ':' + gTimeOut.secOut + ':' + gTimeOut.miliSecOut
+    elScore.innerText = text;
 }
 
 function closeModal() {
@@ -227,6 +223,8 @@ function time() {
     document.getElementById("sec").innerHTML = gTimeOut.secOut;
     document.getElementById("min").innerHTML = gTimeOut.minOut;
     document.getElementById("hour").innerHTML = gTimeOut.hourOut;
+
+
 }
 
 
