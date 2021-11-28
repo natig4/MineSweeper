@@ -84,7 +84,8 @@ function renderCell(elCell, i, j) {
     if (gGame.firstClick) {
         start();
     }
-    if (!gGame.isOn || gBoard[i][j].isMarked || (gBoard[i][j].type === 'mine' && gGame.markedCount + gGame.shownCount === 0)) return;
+    if (!gGame.isOn || gBoard[i][j].isMarked ||
+        (gBoard[i][j].type === 'mine' && gGame.markedCount + gGame.shownCount === 0)) return;
     var strHTML = ''
     switch (gBoard[i][j].type) {
         case 'mine':
@@ -121,9 +122,9 @@ function findNegsToOpen(cellI, cellJ, board) {
     }
 }
 
-function markCell(e, elCell, i, j) {
+function markCell(event, elCell, i, j) {
     if (gGame.firstClick) start();
-    e.preventDefault();
+    event.preventDefault();
     var cell = gBoard[i][j];
     if ((!gGame.isOn) || cell.isVisiable) return;
     if (!cell.isMarked) {
@@ -194,7 +195,6 @@ function changeLevel(elBtn) {
         var button = buttons[i];
         (elBtn.dataset.level === button.dataset.level) ? button.classList.add('choosen'): button.classList.remove('choosen');
     }
-    // console.log(button, 'button')
     gBoardSize = +elBtn.dataset.level;
     gLevel = {
         Size: Math.sqrt(gBoardSize),

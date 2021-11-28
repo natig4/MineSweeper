@@ -211,17 +211,14 @@ function time() {
     gTimeOut.hourOut = checkTime(gTime.hour);
 
     gTime.milisec = ++gTime.milisec;
-
     if (gTime.milisec === 100) {
         gTime.milisec = 0;
         gTime.sec = ++gTime.sec;
     }
-
     if (gTime.sec == 60) {
         gTime.min = ++gTime.min;
         gTime.sec = 0;
     }
-
     if (gTime.min == 60) {
         gTime.min = 0;
         gTime.hour = ++gTime.hour;
@@ -231,8 +228,6 @@ function time() {
     document.getElementById("sec").innerHTML = gTimeOut.secOut;
     document.getElementById("min").innerHTML = gTimeOut.minOut;
     // document.getElementById("hour").innerHTML = gTimeOut.hourOut;
-
-
 }
 
 
@@ -244,10 +239,6 @@ function checkTime(i) {
 }
 
 function resetTimer() {
-
-
-    /*Reset*/
-
     gTime.milisec = 0;
     gTime.sec = 0;
     gTime.min = 0
@@ -257,5 +248,4 @@ function resetTimer() {
     document.getElementById("sec").innerHTML = "00";
     document.getElementById("min").innerHTML = "00";
     // document.getElementById("hour").innerHTML = "00";
-
 }
