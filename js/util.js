@@ -6,7 +6,7 @@ function minesAmount() {
     switch (gBoardSize) {
         case 16:
             minesCount = 2;
-            elModal.style.width = elModal.style.height = 248 + 'px'
+            elModal.style.width = elModal.style.height = 252 + 'px'
             break;
         case 64:
             minesCount = 12;
@@ -179,7 +179,13 @@ function openModal(isVictory) {
     var elTimer = document.querySelector('.stopwatch')
     var elScore = document.querySelector('score-span')
     elTimer.style.display = 'none';
-    elSpan.innerText = (isVictory) ? ' Winner' : ' Loser';
+    if (isVictory) {
+        elSpan.innerText = 'Winner';
+        elModal.style.backgroundColor = 'rgb(59, 230, 59)';
+    } else {
+        elSpan.innerText = 'Loser';
+        elModal.style.backgroundColor = 'rgb(238, 48, 48)';
+    }
     elModal.style.display = 'block';
     var text = gTimeOut.hourOut + ':' + gTimeOut.minOut + ':' + gTimeOut.secOut + ':' + gTimeOut.miliSecOut
     elScore.innerText = text;
