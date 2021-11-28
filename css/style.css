@@ -102,8 +102,6 @@ button {
 }
 
 .modal {
-    /* background-color: rgb(238, 48, 48);
-    background-color: rgb(59, 230, 59); */
     display: none;
     position: absolute;
     float: left;
@@ -116,5 +114,5 @@ button {
 .player-name {
     margin-top: 50px;
     bottom: 0;
-    font-weight: bold
+    font-weight: bold;
 }

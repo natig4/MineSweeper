@@ -131,18 +131,20 @@ function markCell(e, elCell, i, j) {
         elCell.classList.add('flag')
         elCell.innerText = FLAG;
         gGame.markedCount++;
+        cell.isMarked = true;
+        gameOver(elCell, i, j)
     } else {
         elCell.classList.remove('flag')
         gGame.markedCount--
             elCell.innerText = '';
+        cell.isMarked = false;
     }
-    cell.isMarked = !cell.isMarked;
     renderPossibleFlagsAmount();
 }
 
 function gameOver(elCell, i, j) {
     var action = ''
-    if (gBoard[i][j].type === 'mine') {
+    if (gBoard[i][j].type === 'mine' && gBoard[i][j].isMarked === false) {
         action = 'lifeLost';
         gLevel.MINES--;
         gLives--;
@@ -153,7 +155,7 @@ function gameOver(elCell, i, j) {
         if (gLives === 0) {
             action = 'gameLost'
         }
-    } else if (gGame.shownCount === gBoardSize - gLevel.MINES) {
+    } else if ((gGame.shownCount === gBoardSize - gLevel.MINES) && (gGame.markedCount === gLevel.MINES)) {
         gGame.isOn = false;
         action = 'won'
     }

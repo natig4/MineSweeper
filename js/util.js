@@ -187,7 +187,9 @@ function openModal(isVictory) {
         elModal.style.backgroundColor = 'rgb(238, 48, 48)';
     }
     elModal.style.display = 'block';
-    var text = gTimeOut.hourOut + ':' + gTimeOut.minOut + ':' + gTimeOut.secOut + ':' + gTimeOut.miliSecOut
+    var text =
+        // gTimeOut.hourOut + ':' + 
+        gTimeOut.minOut + ':' + gTimeOut.secOut + ':' + gTimeOut.miliSecOut
     elScore.innerText = text;
 }
 
@@ -228,7 +230,7 @@ function time() {
     document.getElementById("milisec").innerHTML = gTimeOut.miliSecOut;
     document.getElementById("sec").innerHTML = gTimeOut.secOut;
     document.getElementById("min").innerHTML = gTimeOut.minOut;
-    document.getElementById("hour").innerHTML = gTimeOut.hourOut;
+    // document.getElementById("hour").innerHTML = gTimeOut.hourOut;
 
 
 }
@@ -254,6 +256,6 @@ function resetTimer() {
     document.getElementById("milisec").innerHTML = "00";
     document.getElementById("sec").innerHTML = "00";
     document.getElementById("min").innerHTML = "00";
-    document.getElementById("hour").innerHTML = "00";
+    // document.getElementById("hour").innerHTML = "00";
 
 }
