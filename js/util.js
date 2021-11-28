@@ -191,6 +191,8 @@ function openModal(isVictory) {
         // gTimeOut.hourOut + ':' + 
         gTimeOut.minOut + ':' + gTimeOut.secOut + ':' + gTimeOut.miliSecOut
     elScore.innerText = text;
+    var timeParam = (gTimeOut.minOut === '00') ? 'Seconds' : 'Minutes';
+    elScore.innerHTML += `<br> ${timeParam}`
 }
 
 function closeModal() {
