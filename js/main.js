@@ -156,7 +156,7 @@ function gameOver(elCell, i, j) {
         if (gLives === 0) {
             action = 'gameLost'
         }
-    } else if ((gGame.shownCount === gBoardSize - gLevel.MINES) && (isIOS)) {
+    } else if ((gGame.shownCount === gBoardSize - gLevel.MINES) && (isIphone)) {
         gGame.isOn = false;
         action = 'won'
     } else if ((gGame.shownCount === gBoardSize - gLevel.MINES) && (gGame.markedCount === gLevel.MINES)) {
